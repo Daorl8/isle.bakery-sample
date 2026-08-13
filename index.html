@@ -35,6 +35,7 @@ html{scroll-behavior:auto}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.62;mix-blend-mode:multiply;
  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(38% 30% at 0% 2%,rgba(155,78,99,.11),transparent 70%),radial-gradient(34% 26% at 100% 10%,rgba(78,107,82,.11),transparent 70%),radial-gradient(40% 30% at 96% 100%,rgba(211,162,74,.12),transparent 70%),radial-gradient(34% 26% at 2% 98%,rgba(110,74,99,.10),transparent 70%)}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
@@ -75,14 +76,17 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .hero h1 em{font-style:italic;color:var(--rose-d)}
 .hero p.lead{font-size:1rem;color:var(--ink2);max-width:42ch}
 .hero .kr{font-size:.92rem;color:var(--faint);margin-top:8px;max-width:40ch}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.badge{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;letter-spacing:.02em;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink2)}
+.badges{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;margin-top:22px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--hand);font-size:1.3rem;line-height:1;color:var(--ink2);padding:1px 4px 3px;border:0;background:none;border-bottom:2.5px solid var(--mustard)}
+.badges .badge:nth-child(1){transform:rotate(-1.6deg)}
+.badges .badge:nth-child(2){transform:rotate(1.3deg)}
+.badges .badge:nth-child(3){transform:rotate(-.7deg)}
 .badge b{color:var(--ink);font-weight:600}
-.badge.pet{border-color:var(--sage);color:var(--sage)}
+.badge.pet{border-bottom-color:var(--sage);color:var(--sage)}
 .hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 40px -22px rgba(58,44,34,.5);transform:rotate(-1.2deg)}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
-.btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:22px}
-.btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;font-weight:600;font-size:.9rem;letter-spacing:.02em;transition:transform .15s,background .2s,border-color .2s}
+.btnrow{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin-top:22px}
+.btn{display:inline-block;line-height:1.2;white-space:nowrap;padding:13px 22px;border-radius:14px;font-weight:600;font-size:.9rem;letter-spacing:.02em;transition:transform .15s,background .2s,border-color .2s}
 .btn:active{transform:scale(.97)}
 .btn.pri{background:var(--rose);color:#fff}
 .btn.pri:hover{background:var(--rose-d)}
@@ -91,7 +95,7 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 
 /* marquee */
 .marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper2);overflow:hidden;white-space:nowrap;padding:11px 0}
-.marq .track{display:inline-block;font-family:var(--hand);font-size:1.35rem;color:var(--ink2);will-change:transform;animation:sc 26s linear infinite}
+.marq .track{display:inline-block;font-family:var(--hand);font-size:1.35rem;color:var(--ink2);will-change:transform}
 .marq .track span{padding:0 20px}
 .marq .track span b{color:var(--terra-d)}
 @keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -170,8 +174,8 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .ocard{display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:22px}
 .ocard .lab{font-family:var(--hand);font-size:1.2rem;color:var(--terra-d)}
 .ocard h3{font-family:var(--disp);font-weight:600;font-size:1.1rem}
-.ocard p{font-size:.88rem;color:var(--ink2)}
-.ocard a.go{margin-top:8px;align-self:flex-start;font-size:.84rem;font-weight:600;color:var(--rose-d);border-bottom:1.5px solid var(--rose-d);padding-bottom:1px}
+.ocard p{font-size:.88rem;color:var(--ink2);margin-bottom:6px}
+.ocard a.go{margin-top:auto;align-self:flex-start;font-size:.84rem;font-weight:600;color:var(--rose-d);border-bottom:1.5px solid var(--rose-d);padding-bottom:1px}
 
 /* footer */
 footer{background:var(--paper2);border-top:1px solid var(--line);padding:44px 0 30px;text-align:center}
@@ -263,7 +267,7 @@ body{padding-bottom:74px}
       <p class="eyebrow">hello, we're</p>
       <img class="hero-logo" src="logo-isle.png" alt="isle">
       <h1>a little <em>island</em><br>of good things.</h1>
-      <p class="lead">A small craft bakery in Seongbuk, Seoul — seasonal European bakes, honest coffee, and a slow corner to share them in.</p>
+      <p class="lead">A small craft bakery in Seongbuk, Seoul. Seasonal European bakes, honest coffee, and a slow corner to share them in.</p>
       <p class="kr">성북동 골목의 작은 베이커리. 제철 재료로 굽는 디저트와 커피, 그리고 함께 나누는 공간이에요.</p>
       <div class="badges">
         <span class="badge"><b>Open daily</b> · 9:00–21:00</span>
@@ -293,8 +297,8 @@ body{padding-bottom:74px}
     <div class="rv">
       <p class="sec-eyebrow">our story</p>
       <h2 class="sec-title">Baked fresh, shared slowly.</h2>
-      <p class="sec-desc">isle began as a quiet idea — an island where good baking, good coffee and good company meet. Everything is made in small batches with seasonal ingredients, so the counter looks a little different each week.</p>
-      <p class="kr">작은 배치로 매일 굽고, 계절에 맞춰 메뉴가 바뀝니다. 서두르지 않고, 오래 머물다 갈 수 있는 동네 베이커리를 지향해요.</p>
+      <p class="sec-desc">isle began as a quiet idea, an island where good baking, good coffee and good company meet. Everything is made in small batches with seasonal ingredients, so the counter looks a little different each week.</p>
+      <p class="kr">아일은 좋은 디저트와 커피, 사람들이 만날 수 있는 조용한 생각에서 시작했어요. 모든 메뉴는 계절마다 나오는 재료로 소규모로 만들어집니다. 그래서 조금씩 가게가 달라 보일 수 있어요.</p>
       <div class="chiprow">
         <span class="chip">Seasonal bakes</span>
         <span class="chip">Coffee &amp; dessert</span>
@@ -309,7 +313,7 @@ body{padding-bottom:74px}
   <div class="rv">
     <p class="sec-eyebrow">fresh from the oven</p>
     <h2 class="sec-title">On the counter today</h2>
-    <p class="sec-desc">From butter cookies to petit gâteau — a rotating line-up of European-leaning bakes.<span class="kr">아래는 대표 메뉴예요. 실제 구성은 시즌·요일마다 달라집니다.</span></p>
+    <p class="sec-desc">From butter cookies to petit gâteau, a rotating line-up of European-leaning bakes.<span class="kr">아래는 대표 메뉴예요. 실제 구성은 시즌·요일마다 달라집니다.</span></p>
   </div>
   <div class="mgrid">
     <article class="mcard rv"><div class="ph"><img src="menu-cookies.jpg" alt="Butter cookies" loading="lazy"></div><div class="tx"><div class="en">Butter Cookies</div><div class="kr">통카빈 · 녹차 · 핑크페퍼</div><span class="tag">3 kinds ♡</span></div></article>
@@ -328,7 +332,7 @@ body{padding-bottom:74px}
   <div class="rv">
     <p class="sec-eyebrow">more than a bakery</p>
     <h2 class="sec-title">An island for the neighborhood</h2>
-    <p class="sec-desc">isle is a gathering spot as much as a bakery — markets, classes and small rituals that bring people together.</p>
+    <p class="sec-desc">isle is a gathering spot as much as a bakery, markets, classes and small rituals that bring people together.<span class="kr">아일은 베이커리, 마켓, 클래스와 사람들이 모일 수 있는 소규모 행사까지 진행 가능한 장소입니다.</span></p>
   </div>
   <div class="comm-grid">
     <article class="ccard rv"><div class="ic">✳</div><h3>Flea &amp; Book Markets</h3><p>Seasonal markets with makers and brands we love.</p><p class="kr">계절마다 여는 플리마켓 · 북마켓</p></article>
@@ -340,7 +344,7 @@ body{padding-bottom:74px}
   <div class="rv">
     <p class="sec-eyebrow">the space</p>
     <h2 class="sec-title">Warm concrete, soft light</h2>
-    <p class="sec-desc">Brick outside, wood and daylight inside — a calm room to slow down in.</p>
+    <p class="sec-desc">Brick outside, wood and daylight inside. A calm room to slow down in.<span class="kr">고즈넉하고 따뜻한 분위기 아래, 느릴 수 있는 여유를 드려요.</span></p>
   </div>
   <div class="gal">
     <a href="space-interior.jpg" target="_blank" rel="noopener"><img src="space-interior.jpg" alt="isle interior" loading="lazy"></a>
@@ -380,7 +384,7 @@ body{padding-bottom:74px}
     <div class="rv">
       <p class="sec-eyebrow">order &amp; catering</p>
       <h2 class="sec-title">Bring isle to your table</h2>
-      <p class="sec-desc">Pre-order for pickup, or ask us about cakes and boxes for your gathering.</p>
+      <p class="sec-desc">Pre-order for pickup, or ask us about cakes and boxes for your gathering.<span class="kr">픽업은 미리 주문해 주세요. 모임용 케이크와 포장은 문의해 주세요.</span></p>
     </div>
     <div class="ogrid">
       <article class="ocard rv"><span class="lab">pre-order</span><h3>Order Form</h3><p>네이버 폼으로 픽업 예약을 받아요.</p><a class="go" href="https://form.naver.com/response/0KhM7WA70YqYTcKPAFpB8g" target="_blank" rel="noopener">Open order form ↗</a></article>
@@ -440,6 +444,12 @@ body{padding-bottom:74px}
     es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var mt=document.querySelector('.marq .track');
+  if(mt){var mxp=0,half=0;
+    function measure(){half=mt.scrollWidth/2;}
+    measure(); window.addEventListener('resize',measure);
+    setInterval(function(){mxp-=0.6; if(half&&mxp<=-half)mxp+=half; mt.style.transform='translateX('+mxp+'px)';},16);
+  }
 })();
 </script>
 <script>
