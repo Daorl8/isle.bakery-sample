@@ -32,7 +32,7 @@
  --body:'Pretendard Variable',Pretendard,system-ui,-apple-system,'Segoe UI',sans-serif;
  --bar:64px;
 }
-html{scroll-behavior:auto;scroll-padding-top:84px}
+html{scroll-behavior:auto;scroll-padding-top:84px;overflow-x:clip}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.62;mix-blend-mode:multiply;
  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E")}
@@ -68,7 +68,7 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .drawer a{padding:14px 22px;border-top:1px solid var(--line2);font-size:.95rem;letter-spacing:.03em}
 
 /* hero */
-.hero{padding-top:38px;padding-bottom:26px}
+.hero{padding-top:38px;padding-bottom:26px;overflow-x:clip}
 .hero-grid{display:grid;gap:26px;align-items:center}
 .hero-logo{width:min(74vw,320px);height:auto;margin-bottom:6px}
 .eyebrow{font-family:var(--hand);font-size:1.5rem;color:var(--terra-d);line-height:1;margin-bottom:8px}
@@ -95,7 +95,7 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 
 
 /* section shell */
-.sec{padding-top:66px;padding-bottom:66px}
+.sec{padding-top:66px;padding-bottom:66px;overflow-x:clip}
 .sec-eyebrow{font-family:var(--hand);font-size:1.5rem;color:var(--terra-d);line-height:1}
 .sec-title{font-family:var(--disp);font-weight:600;font-size:clamp(1.6rem,4.6vw,2.4rem);line-height:1.15;letter-spacing:-.01em;margin:4px 0 12px}
 .sec-desc{color:var(--ink2);max-width:56ch}
@@ -180,12 +180,6 @@ footer .soc a:hover{border-color:var(--ink2)}
 footer .fnote{font-size:.78rem;color:var(--faint);margin-top:10px;line-height:1.6}
 footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);margin-top:14px}
 
-/* mobile quickbar */
-.qbar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(245,238,225,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-.qbar a{flex:1;text-align:center;padding:13px;border-radius:12px;font-weight:600;font-size:.9rem}
-.qbar .q1{background:var(--rose);color:#fff}
-.qbar .q2{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
-body{padding-bottom:74px}
 
 /* reveal + a11y */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
@@ -195,8 +189,6 @@ body{padding-bottom:74px}
 @media (min-width:768px){
  .menu{display:flex}
  .burger,.drawer{display:none}
- .qbar{display:none}
- body{padding-bottom:0}
  .wrap{padding:0 40px}
  .hero{padding-top:56px;padding-bottom:30px}
  .hero-grid{grid-template-columns:1.05fr .95fr;gap:44px}
@@ -304,7 +296,7 @@ body{padding-bottom:74px}
   <div class="rv">
     <p class="sec-eyebrow">fresh from the oven</p>
     <h2 class="sec-title">On the counter today</h2>
-    <p class="sec-desc">From butter cookies to petit gâteau, a rotating line-up of European-leaning bakes.<span class="kr">아래는 대표 메뉴예요. 실제 구성은 시즌·요일마다 달라집니다.</span></p>
+    <p class="sec-desc">From butter cookies to petit gâteau, <br>a rotating line-up of European-leaning bakes.<span class="kr">아래는 대표 메뉴예요. 실제 구성은 시즌·요일마다 달라집니다.</span></p>
   </div>
   <div class="mgrid">
     <article class="mcard rv"><div class="ph"><img src="menu-cookies.jpg" alt="Butter cookies" loading="lazy"></div><div class="tx"><div class="en">Butter Cookies</div><div class="kr">통카빈 · 녹차 · 핑크페퍼</div><span class="tag">3 kinds ♡</span></div></article>
@@ -324,7 +316,7 @@ body{padding-bottom:74px}
   <div class="rv">
     <p class="sec-eyebrow">more than a bakery</p>
     <h2 class="sec-title">An island for the neighborhood</h2>
-    <p class="sec-desc">isle is a gathering spot as much as a bakery, markets, classes and small rituals that bring people together.<span class="kr">아일은 베이커리, 마켓, 클래스와 사람들이 모일 수 있는 소규모 행사까지 진행 가능한 장소입니다.</span></p>
+    <p class="sec-desc">isle is a gathering spot as much as a bakery, markets, classes and small rituals that bring people together.<span class="kr">아일은 베이커리, 마켓, 클래스와 사람들이 모일 수 있는 <br>소규모 행사까지 진행 가능한 장소입니다.</span></p>
   </div>
   <div class="comm-grid">
     <article class="ccard rv"><div class="ic">✳</div><h3>Flea &amp; Book Markets</h3><p>Seasonal markets with makers and brands we love.</p><p class="kr">계절마다 여는 플리마켓 · 북마켓</p></article>
@@ -403,10 +395,6 @@ body{padding-bottom:74px}
   </div>
 </footer>
 
-<nav class="qbar" aria-label="Quick actions">
-  <a class="q1" href="#order">Order &amp; Catering</a>
-  <a class="q2" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">Instagram</a>
-</nav>
 <script>
 (function(){
   var burger=document.getElementById('burger'), drawer=document.getElementById('drawer');
