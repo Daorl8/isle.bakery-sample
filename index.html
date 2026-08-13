@@ -32,7 +32,7 @@
  --body:'Pretendard Variable',Pretendard,system-ui,-apple-system,'Segoe UI',sans-serif;
  --bar:64px;
 }
-html{scroll-behavior:auto}
+html{scroll-behavior:auto;scroll-padding-top:84px}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.62;mix-blend-mode:multiply;
  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E")}
@@ -282,7 +282,7 @@ body{padding-bottom:74px}
   <img class="m-deco" src="motif-star.png" alt="" style="width:150px;top:24px;right:5%;opacity:.42">
   <img class="blob" src="blob-sage.png" alt="" style="width:150px;bottom:9%;left:-30px">
   <div class="wrap about-grid">
-    <div class="about-photo rv"><img src="space-counter.jpg" alt="isle bakery counter with ceramics and cakes"></div>
+    <div class="about-photo rv"><img src="space-counter.jpg" alt="isle interior in warm daylight"></div>
     <div class="rv">
       <p class="sec-eyebrow">our story</p>
       <h2 class="sec-title">Baked fresh, shared slowly.</h2>
@@ -327,6 +327,7 @@ body{padding-bottom:74px}
   </div>
   <div class="comm-grid">
     <article class="ccard rv"><div class="ic">✳</div><h3>Flea &amp; Book Markets</h3><p>Seasonal markets with makers and brands we love.</p><p class="kr">계절마다 여는 플리마켓 · 북마켓</p></article>
+    <article class="ccard rv"><div class="ic">❉</div><h3>Pop-ups &amp; Collabs</h3><p>From a pop-up at The Hyundai to neighborhood markets, isle travels around the city.</p><p class="kr">현대백화점 팝업 등 여러 공간에서 만나요.</p></article>
     <article class="ccard rv"><div class="ic">❋</div><h3>Cafe Class</h3><p>Our founder shares a cafe consulting class online.</p><p class="kr"><a href="https://coloso.co.kr/products/cafeconsultant-kimjihyeon" target="_blank" rel="noopener" style="color:var(--rose-d);border-bottom:1.5px solid var(--rose-d)">Coloso 클래스 보기 ↗</a></p></article>
   </div>
 </section>
@@ -343,8 +344,8 @@ body{padding-bottom:74px}
     <a href="space-lounge.jpg" target="_blank" rel="noopener"><img src="space-lounge.jpg" alt="isle lounge sofa" loading="lazy"></a>
     <a href="space-lamp.jpg" target="_blank" rel="noopener"><img src="space-lamp.jpg" alt="isle table with lamp" loading="lazy"></a>
     <a href="space-patio.jpg" target="_blank" rel="noopener"><img src="space-patio.jpg" alt="isle outdoor seating" loading="lazy"></a>
-    <a href="space-exterior.jpg" target="_blank" rel="noopener"><img src="space-exterior.jpg" alt="isle storefront" loading="lazy"></a>
-    <a href="mood-still.jpg" target="_blank" rel="noopener"><img src="mood-still.jpg" alt="lemons and coffee still life" loading="lazy"></a>
+    <a href="space-exterior.jpg" target="_blank" rel="noopener"><img src="space-exterior.jpg" alt="isle entrance" loading="lazy"></a>
+    <a href="mood-still.jpg" target="_blank" rel="noopener"><img src="mood-still.jpg" alt="flowers by the wall" loading="lazy"></a>
     <a href="mood-flower.jpg" target="_blank" rel="noopener"><img src="mood-flower.jpg" alt="orange flowers on the wall" loading="lazy"></a>
     <a href="menu-box.jpg" target="_blank" rel="noopener"><img src="menu-box.jpg" alt="pastry take-out box" loading="lazy"></a>
   </div>
@@ -365,7 +366,7 @@ body{padding-bottom:74px}
         <div class="vrow"><div class="k">Pay</div><div class="v">ZeroPay · easy pay · card<span class="kr">제로페이 · 간편결제 · 카드</span></div></div>
         <div class="vrow"><div class="k">Good to know</div><div class="v">Takeout discount · Free Wi-Fi · Packaging<span class="kr">테이크아웃 할인 · 무선인터넷 · 포장</span></div></div>
       </div>
-      <div class="hero-photo rv" style="transform:rotate(1deg);aspect-ratio:3/4"><img src="space-exterior.jpg" alt="isle storefront"></div>
+      <div class="hero-photo rv" style="transform:rotate(1deg);aspect-ratio:3/4"><img src="space-exterior.jpg" alt="isle entrance"></div>
     </div>
   </div>
 </section>
@@ -415,7 +416,7 @@ body{padding-bottom:74px}
   var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   function smooth(hash){
     var el=document.querySelector(hash); if(!el) return;
-    var y=el.getBoundingClientRect().top+window.pageYOffset-52;
+    var y=el.getBoundingClientRect().top+window.pageYOffset-84;
     var start=window.pageYOffset, d=y-start, t0=null, dur=Math.min(760,Math.max(300,Math.abs(d)*.5));
     function step(ts){ if(t0===null)t0=ts; var p=Math.min(1,(ts-t0)/dur);
       var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2; window.scrollTo(0,start+d*e);
