@@ -36,7 +36,6 @@ html{scroll-behavior:auto}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.62;mix-blend-mode:multiply;
  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E")}
-body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.72;background-repeat:no-repeat;background-image:url(blob-rose.png),url(blob-sage.png),url(blob-mustard.png),url(blob-plum.png),url(blob-terra.png),url(blob-blue.png);background-position:left 12px top 12%,right 10px top 6%,left 3% bottom 10%,right 5% bottom 5%,left 26% top 4px,right 22% bottom 30%;background-size:180px,165px,150px,175px,140px,158px}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
@@ -221,6 +220,9 @@ body{padding-bottom:74px}
 .hero-grid{position:relative;z-index:1}
 .m-deco{position:absolute;z-index:0;pointer-events:none;opacity:.8}
 @media(max-width:767px){.m-deco{display:none}}
+.blob{position:absolute;z-index:0;pointer-events:none;opacity:.6}
+.sec>.rv,.sec>.mgrid,.sec>.note,.sec>.comm-grid,.sec>.gal{position:relative;z-index:1}
+@media(max-width:767px){.blob{opacity:.42;max-width:34vw}}
 .hero h1,.sec-title{font-variation-settings:"wght" 600,"BNCE" 74,"INFM" 54}
 .mcard .en,.ccard h3,.ocard h3{font-variation-settings:"wght" 560,"BNCE" 48,"INFM" 38}
 </style>
@@ -256,7 +258,6 @@ body{padding-bottom:74px}
 <main id="top">
 <section class="hero wrap">
   <img class="m-deco" src="motif-flower.png" alt="" style="width:118px;top:64px;right:1%">
-  <img class="m-deco" src="motif-star.png" alt="" style="width:210px;bottom:-46px;left:-46px;opacity:.5">
   <div class="hero-grid">
     <div class="rv">
       <p class="eyebrow">hello, we're</p>
@@ -279,6 +280,7 @@ body{padding-bottom:74px}
 
 <section class="sec about" id="about">
   <img class="m-deco" src="motif-star.png" alt="" style="width:150px;top:24px;right:5%;opacity:.42">
+  <img class="blob" src="blob-sage.png" alt="" style="width:150px;bottom:9%;left:-30px">
   <div class="wrap about-grid">
     <div class="about-photo rv"><img src="space-counter.jpg" alt="isle bakery counter with ceramics and cakes"></div>
     <div class="rv">
@@ -297,6 +299,7 @@ body{padding-bottom:74px}
 </section>
 
 <section class="sec wrap" id="menu">
+  <img class="blob" src="blob-mustard.png" alt="" style="width:150px;top:2%;right:-26px">
   <div class="rv">
     <p class="sec-eyebrow">fresh from the oven</p>
     <h2 class="sec-title">On the counter today</h2>
@@ -316,6 +319,7 @@ body{padding-bottom:74px}
 </section>
 
 <section class="sec wrap" id="community">
+  <img class="blob" src="blob-rose.png" alt="" style="width:145px;bottom:5%;left:-26px">
   <div class="rv">
     <p class="sec-eyebrow">more than a bakery</p>
     <h2 class="sec-title">An island for the neighborhood</h2>
@@ -328,6 +332,7 @@ body{padding-bottom:74px}
 </section>
 
 <section class="sec wrap" id="space">
+  <img class="blob" src="blob-blue.png" alt="" style="width:150px;top:5%;right:-22px">
   <div class="rv">
     <p class="sec-eyebrow">the space</p>
     <h2 class="sec-title">Warm concrete, soft light</h2>
@@ -367,6 +372,7 @@ body{padding-bottom:74px}
 
 <section class="sec order" id="order">
   <img class="m-deco" src="motif-star.png" alt="" style="width:165px;bottom:14px;right:3%;opacity:.4">
+  <img class="blob" src="blob-plum.png" alt="" style="width:150px;bottom:8%;left:-26px">
   <div class="wrap">
     <div class="rv">
       <p class="sec-eyebrow">order &amp; catering</p>
