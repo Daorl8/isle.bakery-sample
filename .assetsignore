@@ -1,0 +1,12 @@
+.git
+.git/**
+wrangler.toml
+.assetsignore
+README.md
+CHANGELOG.md
+STRUCTURE.md
+img
+img/**
+_logo_crop_raw.jpg
+menu-ade.jpg
+logo-isle-cream.png
