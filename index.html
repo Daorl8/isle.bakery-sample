@@ -191,7 +191,6 @@ body{padding-bottom:74px}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
 .rv.in{opacity:1;transform:none}
 :focus-visible{outline:2.5px solid var(--terra-d);outline-offset:3px;border-radius:4px}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (min-width:768px){
  .menu{display:flex}
@@ -224,6 +223,7 @@ body{padding-bottom:74px}
 .hero h1,.sec-title{font-variation-settings:"wght" 600,"BNCE" 74,"INFM" 54}
 .mcard .en,.ccard h3,.ocard h3{font-variation-settings:"wght" 560,"BNCE" 48,"INFM" 38}
 </style>
+<noscript><style>.rv{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 <div class="demo">🥐 <b>이피웹 제작 샘플</b> · isle bakery 데모 (실제 정보 일부는 예시입니다)</div>
