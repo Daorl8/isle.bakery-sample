@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:BNCE,INFM,wght@-100..100,0..100,300..800&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Bakery","name":"isle","alternateName":"아일","description":"Craft bakery in Seongbuk, Seoul. Seasonal European bakes, coffee & dessert.","image":"https://isle-bakery-sample.lgt3232.workers.dev/hero-opera.jpg","url":"https://isle-bakery-sample.lgt3232.workers.dev/","servesCuisine":["Bakery","Cafe","Dessert"],"areaServed":"Seongbuk-gu, Seoul","address":{"@type":"PostalAddress","streetAddress":"34 Samseongyo-ro 11-gil","addressLocality":"Seongbuk-gu","addressRegion":"Seoul","addressCountry":"KR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"}],"sameAs":["https://www.instagram.com/isle.bakery/"]}
@@ -27,8 +27,8 @@
  --paper:#F5EEE1; --paper2:#EFE5D3; --card:#FBF6EC; --ink:#3A2C22; --ink2:#6B5A4A; --faint:#9C8A76;
  --line:#DCCDB6; --line2:#E7DBC6;
  --terra:#B4653F; --terra-d:#A24E2E; --rose:#9B4E63; --rose-d:#97445B; --plum:#6E4A63; --sage:#4F6B52; --mustard:#D3A24A;
- --disp:'Shantell Sans',system-ui,sans-serif;
- --hand:'Caveat',system-ui,cursive;
+ --disp:'Gochi Hand',system-ui,sans-serif;
+ --hand:'Space Mono','Pretendard Variable',Pretendard,ui-monospace,SFMono-Regular,monospace;
  --body:'Pretendard Variable',Pretendard,system-ui,-apple-system,'Segoe UI',sans-serif;
  --bar:64px;
 }
@@ -159,7 +159,7 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .visit .sec-title{color:#fff}
 .visit-grid{display:grid;gap:26px;margin-top:26px}
 .vrow{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(245,238,225,.16)}
-.vrow .k{font-family:var(--disp);font-weight:600;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mustard);width:150px;flex-shrink:0;padding-top:2px;line-height:1.25}
+.vrow .k{font-family:var(--hand);font-weight:700;font-size:.74rem;letter-spacing:.03em;text-transform:uppercase;color:var(--mustard);width:150px;flex-shrink:0;padding-top:3px;line-height:1.35}
 .vrow .v{color:#EDE3D2;font-size:.94rem}
 .vrow .v b{color:#fff;font-weight:600}
 .vrow .v .kr{display:block;font-size:.85rem;color:#C9BBA6;margin-top:3px}
@@ -220,8 +220,8 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
 .blob{position:absolute;z-index:0;pointer-events:none;opacity:.6}
 .sec>.rv,.sec>.mgrid,.sec>.note,.sec>.comm-grid,.sec>.gal{position:relative;z-index:1}
 @media(max-width:767px){.blob{opacity:.42;max-width:34vw}}
-.hero h1,.sec-title{font-variation-settings:"wght" 600,"BNCE" 74,"INFM" 54}
-.mcard .en,.ccard h3,.ocard h3{font-variation-settings:"wght" 560,"BNCE" 48,"INFM" 38}
+.hero p.lead,.sec-desc{font-family:var(--hand);letter-spacing:-.02em}
+.kr{font-family:var(--body);letter-spacing:normal}
 </style>
 <noscript><style>.rv{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
