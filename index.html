@@ -78,9 +78,6 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .hero .kr{font-size:.92rem;color:var(--faint);margin-top:8px;max-width:40ch}
 .badges{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;margin-top:22px}
 .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--hand);font-size:1.3rem;line-height:1;color:var(--ink2);padding:1px 4px 3px;border:0;background:none;border-bottom:2.5px solid var(--mustard)}
-.badges .badge:nth-child(1){transform:rotate(-1.6deg)}
-.badges .badge:nth-child(2){transform:rotate(1.3deg)}
-.badges .badge:nth-child(3){transform:rotate(-.7deg)}
 .badge b{color:var(--ink);font-weight:600}
 .badge.pet{border-bottom-color:var(--sage);color:var(--sage)}
 .hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 40px -22px rgba(58,44,34,.5);transform:rotate(-1.2deg)}
@@ -220,7 +217,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
 .blob{position:absolute;z-index:0;pointer-events:none;opacity:.6}
 .sec>.rv,.sec>.mgrid,.sec>.note,.sec>.comm-grid,.sec>.gal{position:relative;z-index:1}
 @media(max-width:767px){.blob{opacity:.42;max-width:34vw}}
-.hero p.lead,.sec-desc{font-family:var(--hand);letter-spacing:-.02em}
+.hero p.lead,.sec-desc{font-family:var(--body);letter-spacing:normal}
 .kr{font-family:var(--body);letter-spacing:normal}
 </style>
 <noscript><style>.rv{opacity:1 !important;transform:none !important}</style></noscript>
@@ -257,10 +254,9 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
   <img class="m-deco" src="motif-flower.png" alt="" style="width:118px;top:64px;right:1%">
   <div class="hero-grid">
     <div class="rv">
-      <p class="eyebrow">hello, we're</p>
       <img class="hero-logo" src="logo-isle.png" alt="isle">
-      <h1>a little <em>island</em><br>of good things.</h1>
-      <p class="lead">A small craft bakery in Seongbuk, Seoul. Seasonal European bakes, honest coffee, and a slow corner to share them in.</p>
+      <h1>a little <em>island</em><br>baked with the seasons.</h1>
+      <p class="lead">A small craft bakery in Seongbuk, Seoul. Seasonal bakes inspired by what each season brings, with coffee to enjoy alongside them.</p>
       <div class="badges">
         <span class="badge"><b>Open daily</b> · 9:00–21:00</span>
         <span class="badge pet">Pet friendly</span>
@@ -282,7 +278,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
     <div class="rv">
       <p class="sec-eyebrow">order online</p>
       <h2 class="sec-title">Seasonal Cakes</h2>
-      <p class="sec-desc">Order our seasonal cakes online and pick them up fresh at isle.<span class="kr">제철 케이크를 온라인으로 주문하고 매장에서 픽업하세요.</span></p>
+      <p class="sec-desc">From cupcakes and loaf cakes to cookies and other baked treats, we offer a variety of bakes that change with the seasons.</p>
       <a class="btn pri" href="https://buy.tosspayments.com/shops/1574193-2642" target="_blank" rel="noopener" style="margin-top:20px">시즌 케이크 구매하기</a>
     </div>
   </div>
