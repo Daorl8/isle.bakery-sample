@@ -139,14 +139,15 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 
 /* community */
 .comm-grid{display:grid;gap:16px;margin-top:32px}
-.ccard{display:block;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:24px 22px;transition:transform .25s,box-shadow .25s,border-color .2s}
+.ccard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:24px 22px;transition:transform .25s,box-shadow .25s,border-color .2s}
 a.ccard:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(58,44,34,.4);border-color:var(--sage)}
 .ccard .ic{height:34px;display:flex;align-items:center;color:var(--sage)}
 .ccard .ic svg{width:30px;height:30px;stroke:var(--sage);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.ccard h3{font-family:var(--disp);font-weight:600;font-size:1.15rem;margin:10px 0 6px}
+.ccard h3{font-family:var(--disp);font-weight:600;font-size:1.15rem;margin:10px 0 6px;min-height:1.2em}
 .ccard p{font-size:.9rem;color:var(--ink2)}
+.ccard p:not(.kr){min-height:3.4em}
 .ccard .kr{font-size:.84rem;color:var(--faint);margin-top:5px}
-.ccard .more{display:inline-block;margin-top:12px;font-family:var(--hand);font-size:1.05rem;color:var(--terra-d)}
+.ccard .more{align-self:flex-start;margin-top:auto;padding-top:14px;font-family:var(--hand);font-size:1.05rem;color:var(--terra-d)}
 
 /* gallery groups */
 .galgroup{scroll-margin-top:84px}
@@ -308,15 +309,15 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
   <div class="comm-grid">
     <a class="ccard rv" href="#gal-interior">
       <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 9l1.3-4.1A1.5 1.5 0 0 1 5.9 3.9h12.2a1.5 1.5 0 0 1 1.4 1L20.8 9"/><path d="M4.2 9v10.2a.8.8 0 0 0 .8.8h14a.8.8 0 0 0 .8-.8V9"/><path d="M3.2 9h17.6"/><path d="M9.5 20.2V15h5v5.2"/></svg></div>
-      <h3>The Space</h3><p>Our little shop — counter, corners and quiet light.</p><p class="kr">매장 내부 · 카운터와 자리</p><span class="more">사진 보기 ↓</span>
+      <h3>The Space</h3><p>Our little shop — counter, corners and quiet light.</p><p class="kr">매장 내부 · 카운터와 자리</p><span class="more">View photos ↓</span>
     </a>
     <a class="ccard rv" href="#gal-dessert">
       <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10.2h12l-1.2 9a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 10.2z"/><path d="M4.8 10.2h14.4"/><path d="M8.8 10.2c0-2 1.4-3.4 3.2-3.4s3.2 1.4 3.2 3.4"/><path d="M12 3.4v1.7"/></svg></div>
-      <h3>Desserts</h3><p>Seasonal cakes, cookies and petit gâteau.</p><p class="kr">시즌 케이크 · 쿠키 · 디저트</p><span class="more">사진 보기 ↓</span>
+      <h3>Desserts</h3><p>Seasonal cakes, cookies and petit gâteau.</p><p class="kr">시즌 케이크 · 쿠키 · 디저트</p><span class="more">View photos ↓</span>
     </a>
     <a class="ccard rv" href="#gal-market">
       <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8.2h12l-1 11a1 1 0 0 1-1 .9H8a1 1 0 0 1-1-.9L6 8.2z"/><path d="M8.6 8.2V6.6a3.4 3.4 0 0 1 6.8 0v1.6"/></svg></div>
-      <h3>Markets &amp; Events</h3><p>Flea markets, pop-ups and small gatherings.</p><p class="kr">플리마켓 · 팝업 · 행사</p><span class="more">사진 보기 ↓</span>
+      <h3>Markets &amp; Events</h3><p>Flea markets, pop-ups and small gatherings.</p><p class="kr">플리마켓 · 팝업 · 행사</p><span class="more">View photos ↓</span>
     </a>
   </div>
   <div style="text-align:center;margin-top:32px;position:relative;z-index:1"><a class="ig-btn" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a></div>
@@ -345,7 +346,6 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
       <a href="sweet-2.jpg" target="_blank" rel="noopener"><img src="sweet-2.jpg" width="720" height="959" alt="isle loaf cake" loading="lazy"></a>
       <a href="sweet-3.jpg" target="_blank" rel="noopener"><img src="sweet-3.jpg" width="751" height="1000" alt="isle petit gâteau" loading="lazy"></a>
       <a href="sweet-4.jpg" target="_blank" rel="noopener"><img src="sweet-4.jpg" width="750" height="1000" alt="isle dessert table" loading="lazy"></a>
-      <a href="sweet-5.jpg" target="_blank" rel="noopener"><img src="sweet-5.jpg" width="750" height="1000" alt="isle petit gâteau tray" loading="lazy"></a>
       <a href="sweet-6.jpg" target="_blank" rel="noopener"><img src="sweet-6.jpg" width="750" height="1000" alt="isle fig dessert" loading="lazy"></a>
       <a href="sweet-7.jpg" target="_blank" rel="noopener"><img src="sweet-7.jpg" width="667" height="1000" alt="isle chocolate bakes" loading="lazy"></a>
       <a href="sweet-8.jpg" target="_blank" rel="noopener"><img src="sweet-8.jpg" width="720" height="960" alt="isle strawberry cakes" loading="lazy"></a>
