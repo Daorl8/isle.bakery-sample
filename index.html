@@ -77,12 +77,13 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .hero p.lead{font-size:1rem;color:var(--ink2);max-width:42ch}
 .hero .kr{font-size:.92rem;color:var(--faint);margin-top:8px;max-width:40ch}
 .badges{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;margin-top:22px}
-.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--hand);font-size:1.3rem;line-height:1;color:var(--ink2);padding:1px 4px 3px;border:0;background:none;border-bottom:2.5px solid var(--mustard)}
+.badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--hand);font-style:italic;font-size:1.3rem;line-height:1;color:var(--ink2);padding:1px 4px 3px;border:0;background:none;border-bottom:2.5px solid var(--mustard)}
 .badges .badge:nth-child(1){transform:rotate(-2.4deg)}
 .badges .badge:nth-child(2){transform:rotate(1.8deg) translateY(-4px)}
 .badges .badge:nth-child(3){transform:rotate(-1.4deg) translateY(2px)}
-.badge b{color:var(--ink);font-weight:600}
+.badge b{color:var(--ink);font-weight:700}
 .badge.pet{border-bottom-color:var(--sage);color:var(--sage)}
+.badge .paw{width:1.05em;height:1.05em;flex:0 0 auto;fill:currentColor;transform:translateY(-1px)}
 .hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 40px -22px rgba(58,44,34,.5);transform:rotate(-1.2deg)}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .btnrow{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin-top:22px}
@@ -90,12 +91,12 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 .btn:active{transform:scale(.97)}
 .btn.pri{background:var(--rose);color:#fff}
 .btn.pri:hover{background:var(--rose-d)}
-.btn.sec{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-.btn.sec:hover{background:var(--ink);color:var(--paper)}
-.ig-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:220px;line-height:1;padding:15px 40px;border:1.5px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:600;font-size:.95rem;letter-spacing:.02em;background:transparent;transition:background .2s,color .2s}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.ig-btn{display:inline-block;height:48px;line-height:46px;padding:0 40px;box-sizing:border-box;min-width:220px;text-align:center;white-space:nowrap;border:1.5px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:600;font-size:.95rem;letter-spacing:.02em;background:transparent;transition:background .2s,color .2s}
 .ig-btn:hover{background:var(--ink);color:var(--paper)}
 .ig-btn:active{transform:scale(.98)}
-.ig-btn svg{width:19px;height:19px;flex:0 0 auto}
+.ig-btn svg{width:18px;height:18px;vertical-align:-3px;margin-right:8px}
 
 
 /* section shell */
@@ -138,11 +139,22 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(245,238,225,.9);back
 
 /* community */
 .comm-grid{display:grid;gap:16px;margin-top:32px}
-.ccard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:24px 22px}
-.ccard .ic{font-family:var(--disp);font-weight:700;font-size:1.5rem;color:var(--sage)}
-.ccard h3{font-family:var(--disp);font-weight:600;font-size:1.15rem;margin:8px 0 6px}
+.ccard{display:block;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:24px 22px;transition:transform .25s,box-shadow .25s,border-color .2s}
+a.ccard:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(58,44,34,.4);border-color:var(--sage)}
+.ccard .ic{height:34px;display:flex;align-items:center;color:var(--sage)}
+.ccard .ic svg{width:30px;height:30px;stroke:var(--sage);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ccard h3{font-family:var(--disp);font-weight:600;font-size:1.15rem;margin:10px 0 6px}
 .ccard p{font-size:.9rem;color:var(--ink2)}
 .ccard .kr{font-size:.84rem;color:var(--faint);margin-top:5px}
+.ccard .more{display:inline-block;margin-top:12px;font-family:var(--hand);font-size:1.05rem;color:var(--terra-d)}
+
+/* gallery groups */
+.galgroup{scroll-margin-top:84px}
+.galgroup+.galgroup{margin-top:48px}
+.gal-label{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;font-family:var(--disp);font-weight:600;font-size:clamp(1.35rem,3.6vw,1.95rem);line-height:1.1;color:var(--ink)}
+.gal-label .no{font-family:var(--hand);font-style:italic;font-size:1.05rem;color:var(--terra-d)}
+.gal-label em{font-style:normal;font-family:var(--body);font-size:.9rem;color:var(--faint);font-weight:400;letter-spacing:normal}
+.galgroup .gal{margin-top:18px}
 
 /* gallery */
 .gal{columns:2;column-gap:12px;margin-top:34px}
@@ -260,7 +272,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
       <p class="lead">A small craft bakery in Seongbuk, Seoul. Seasonal bakes inspired by what each season brings, with coffee to enjoy alongside them.</p>
       <div class="badges">
         <span class="badge"><b>Open daily</b> · 9:00–21:00</span>
-        <span class="badge pet">Pet friendly</span>
+        <span class="badge pet"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6" cy="10" rx="2" ry="2.6"/><ellipse cx="18" cy="10" rx="2" ry="2.6"/><ellipse cx="9.7" cy="6.4" rx="1.9" ry="2.4"/><ellipse cx="14.3" cy="6.4" rx="1.9" ry="2.4"/><path d="M12 11.4c-2.6 0-4.7 1.9-4.7 4.1 0 1.7 1.4 2.6 2.9 2.6 .9 0 1.3-.3 1.8-.3s.9.3 1.8.3c1.5 0 2.9-.9 2.9-2.6 0-2.2-2.1-4.1-4.7-4.1z"/></svg>Pet friendly</span>
         <span class="badge">Seongbuk · Seoul</span>
       </div>
       <div class="btnrow">
@@ -294,29 +306,62 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
     <p class="sec-desc">isle is a gathering spot as much as a bakery, markets, classes and small rituals that bring people together.<span class="kr">아일은 베이커리, 마켓, 클래스와 사람들이 모일 수 있는 <br>소규모 행사까지 진행 가능한 장소입니다.</span></p>
   </div>
   <div class="comm-grid">
-    <article class="ccard rv"><div class="ic">✳</div><h3>Flea &amp; Book Markets</h3><p>Seasonal markets with makers and brands we love.</p><p class="kr">계절마다 여는 플리마켓 · 북마켓</p></article>
-    <article class="ccard rv"><div class="ic">❉</div><h3>Pop-ups &amp; Collabs</h3><p>We're open to pop-ups and collaborations. For inquiries and proposals, please send us a DM.</p><p class="kr">팝업 및 콜라보를 진행합니다. 제안 및 문의는 DM으로 보내주세요.</p></article>
-    <article class="ccard rv"><div class="ic">❋</div><h3>Cafe Class</h3><p>Our founder shares a cafe consulting class online.</p><p class="kr"><a href="https://coloso.co.kr/products/cafeconsultant-kimjihyeon" target="_blank" rel="noopener" style="color:var(--rose-d);border-bottom:1.5px solid var(--rose-d)">Coloso 클래스 보기 ↗</a></p></article>
+    <a class="ccard rv" href="#gal-interior">
+      <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 9l1.3-4.1A1.5 1.5 0 0 1 5.9 3.9h12.2a1.5 1.5 0 0 1 1.4 1L20.8 9"/><path d="M4.2 9v10.2a.8.8 0 0 0 .8.8h14a.8.8 0 0 0 .8-.8V9"/><path d="M3.2 9h17.6"/><path d="M9.5 20.2V15h5v5.2"/></svg></div>
+      <h3>The Space</h3><p>Our little shop — counter, corners and quiet light.</p><p class="kr">매장 내부 · 카운터와 자리</p><span class="more">사진 보기 ↓</span>
+    </a>
+    <a class="ccard rv" href="#gal-dessert">
+      <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10.2h12l-1.2 9a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 10.2z"/><path d="M4.8 10.2h14.4"/><path d="M8.8 10.2c0-2 1.4-3.4 3.2-3.4s3.2 1.4 3.2 3.4"/><path d="M12 3.4v1.7"/></svg></div>
+      <h3>Desserts</h3><p>Seasonal cakes, cookies and petit gâteau.</p><p class="kr">시즌 케이크 · 쿠키 · 디저트</p><span class="more">사진 보기 ↓</span>
+    </a>
+    <a class="ccard rv" href="#gal-market">
+      <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8.2h12l-1 11a1 1 0 0 1-1 .9H8a1 1 0 0 1-1-.9L6 8.2z"/><path d="M8.6 8.2V6.6a3.4 3.4 0 0 1 6.8 0v1.6"/></svg></div>
+      <h3>Markets &amp; Events</h3><p>Flea markets, pop-ups and small gatherings.</p><p class="kr">플리마켓 · 팝업 · 행사</p><span class="more">사진 보기 ↓</span>
+    </a>
   </div>
   <div style="text-align:center;margin-top:32px;position:relative;z-index:1"><a class="ig-btn" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a></div>
 </section>
 
 <section class="sec wrap" id="space">
   <img class="blob" loading="lazy" src="blob-blue.png" alt="" style="width:150px;top:5%;right:-22px">
-  <div class="rv">
-    <p class="sec-eyebrow">in frames</p>
-    <h2 class="sec-title">A look around isle</h2>
-    <p class="sec-desc">From our shop to coffee and the markets we love — a look around isle.<span class="kr">매장과 커피, 마켓까지 — isle의 이런저런 순간들이에요.</span></p>
+  <div class="galgroup" id="gal-interior">
+    <p class="gal-label rv"><span class="no">01</span> The Space <em>매장 내부</em></p>
+    <div class="gal">
+      <a href="space-interior.jpg" target="_blank" rel="noopener"><img src="space-interior.jpg" width="933" height="1400" alt="isle interior" loading="lazy"></a>
+      <a href="space-lounge.jpg" target="_blank" rel="noopener"><img src="space-lounge.jpg" width="1050" height="1400" alt="isle seating corner" loading="lazy"></a>
+      <a href="space-lamp.jpg" target="_blank" rel="noopener"><img src="space-lamp.jpg" width="933" height="1400" alt="isle espresso bar" loading="lazy"></a>
+      <a href="space-counter.jpg" target="_blank" rel="noopener"><img src="space-counter.jpg" width="720" height="960" alt="isle pastry counter" loading="lazy"></a>
+      <a href="space-patio.jpg" target="_blank" rel="noopener"><img src="space-patio.jpg" width="933" height="1400" alt="isle window seat" loading="lazy"></a>
+      <a href="space-exterior.jpg" target="_blank" rel="noopener"><img src="space-exterior.jpg" width="933" height="1400" alt="isle storefront" loading="lazy"></a>
+    </div>
   </div>
-  <div class="gal">
-    <a href="space-interior.jpg" target="_blank" rel="noopener"><img src="space-interior.jpg" alt="isle interior" loading="lazy"></a>
-    <a href="space-lounge.jpg" target="_blank" rel="noopener"><img src="space-lounge.jpg" alt="isle interior" loading="lazy"></a>
-    <a href="space-lamp.jpg" target="_blank" rel="noopener"><img src="space-lamp.jpg" alt="isle espresso bar" loading="lazy"></a>
-    <a href="space-patio.jpg" target="_blank" rel="noopener"><img src="space-patio.jpg" alt="isle storefront window" loading="lazy"></a>
-    <a href="space-exterior.jpg" target="_blank" rel="noopener"><img src="space-exterior.jpg" alt="isle bakery sign" loading="lazy"></a>
-    <a href="mood-still.jpg" target="_blank" rel="noopener"><img src="mood-still.jpg" alt="isle cappuccino" loading="lazy"></a>
-    <a href="mood-flower.jpg" target="_blank" rel="noopener"><img src="mood-flower.jpg" alt="isle market day" loading="lazy"></a>
-    <a href="menu-box.jpg" target="_blank" rel="noopener"><img src="menu-box.jpg" alt="isle catering platter" loading="lazy"></a>
+
+  <div class="galgroup" id="gal-dessert">
+    <p class="gal-label rv"><span class="no">02</span> Desserts <em>디저트</em></p>
+    <div class="gal">
+      <a href="menu-loaf.jpg" target="_blank" rel="noopener"><img src="menu-loaf.jpg" width="1050" height="1400" alt="isle loaf cake" loading="lazy"></a>
+      <a href="menu-cupcake.jpg" target="_blank" rel="noopener"><img src="menu-cupcake.jpg" width="720" height="960" alt="isle cupcake" loading="lazy"></a>
+      <a href="menu-cookies.jpg" target="_blank" rel="noopener"><img src="menu-cookies.jpg" width="720" height="959" alt="isle butter cookies" loading="lazy"></a>
+      <a href="menu-snowball.jpg" target="_blank" rel="noopener"><img src="menu-snowball.jpg" width="935" height="1400" alt="isle snowball cookies" loading="lazy"></a>
+      <a href="menu-biscotti.jpg" target="_blank" rel="noopener"><img src="menu-biscotti.jpg" width="1050" height="1400" alt="isle biscotti" loading="lazy"></a>
+      <a href="menu-choco.jpg" target="_blank" rel="noopener"><img src="menu-choco.jpg" width="787" height="1400" alt="isle chocolate bake" loading="lazy"></a>
+      <a href="menu-citrus.jpg" target="_blank" rel="noopener"><img src="menu-citrus.jpg" width="1050" height="1400" alt="isle citrus dessert" loading="lazy"></a>
+      <a href="menu-box.jpg" target="_blank" rel="noopener"><img src="menu-box.jpg" width="1050" height="1400" alt="isle dessert box" loading="lazy"></a>
+    </div>
+  </div>
+
+  <div class="galgroup" id="gal-market">
+    <p class="gal-label rv"><span class="no">03</span> Markets &amp; Events <em>플리마켓 · 행사</em></p>
+    <div class="gal">
+      <a href="mkt-day.jpg" target="_blank" rel="noopener"><img src="mkt-day.jpg" width="667" height="1000" alt="isle flea market day" loading="lazy"></a>
+      <a href="mkt-stall.jpg" target="_blank" rel="noopener"><img src="mkt-stall.jpg" width="562" height="1000" alt="market stall with plants" loading="lazy"></a>
+      <a href="mkt-plants.jpg" target="_blank" rel="noopener"><img src="mkt-plants.jpg" width="667" height="1000" alt="plant maker table at isle market" loading="lazy"></a>
+      <a href="mkt-produce.jpg" target="_blank" rel="noopener"><img src="mkt-produce.jpg" width="667" height="1000" alt="fresh seasonal produce at the market" loading="lazy"></a>
+      <a href="mkt-seller.jpg" target="_blank" rel="noopener"><img src="mkt-seller.jpg" width="667" height="1000" alt="a maker at isle market" loading="lazy"></a>
+      <a href="mkt-bakes.jpg" target="_blank" rel="noopener"><img src="mkt-bakes.jpg" width="667" height="1000" alt="baked goods at the market" loading="lazy"></a>
+      <a href="mkt-storefront.jpg" target="_blank" rel="noopener"><img src="mkt-storefront.jpg" width="562" height="1000" alt="isle on market day" loading="lazy"></a>
+      <a href="event-yoga.jpg" target="_blank" rel="noopener"><img src="event-yoga.jpg" width="750" height="1000" alt="isle wellness class" loading="lazy"></a>
+    </div>
   </div>
 </section>
 
@@ -350,9 +395,9 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
       <p class="sec-desc">Pre-order for pickup, or ask us about cakes and boxes for your gathering.<span class="kr">픽업은 미리 주문해 주세요. 모임용 케이크와 포장은 문의해 주세요.</span></p>
     </div>
     <div class="ogrid">
-      <article class="ocard rv"><span class="lab">pre-order</span><h3>Order Form</h3><p>네이버 폼으로 픽업 예약을 받아요.</p><a class="go" href="https://form.naver.com/response/0KhM7WA70YqYTcKPAFpB8g" target="_blank" rel="noopener">Open order form ↗</a></article>
-      <article class="ocard rv"><span class="lab">for events</span><h3>Catering &amp; Bulk</h3><p>모임·행사용 케이크와 디저트 박스는 DM으로 문의해 주세요.</p><a class="go" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">DM on Instagram ↗</a></article>
-      <article class="ocard rv"><span class="lab">say hello</span><h3>Follow along</h3><p>시즌 메뉴·마켓·팝업 소식은 인스타그램에서 만나요.</p><a class="go" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">@isle.bakery ↗</a></article>
+      <article class="ocard rv"><span class="lab">pre-order</span><h3>Order Form</h3><p>네이버 폼으로 픽업 예약을 받아요.</p><a class="go" href="https://form.naver.com/response/0KhM7WA70YqYTcKPAFpB8g" target="_blank" rel="noopener">Open order form →</a></article>
+      <article class="ocard rv"><span class="lab">for events</span><h3>Catering &amp; Bulk</h3><p>모임·행사용 케이크와 디저트 박스는 DM으로 문의해 주세요.</p><a class="go" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">DM on Instagram →</a></article>
+      <article class="ocard rv"><span class="lab">say hello</span><h3>Follow along</h3><p>시즌 메뉴·마켓·팝업 소식은 인스타그램에서 만나요.</p><a class="go" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">@isle.bakery →</a></article>
     </div>
   </div>
 </section>
