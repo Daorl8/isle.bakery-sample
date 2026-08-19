@@ -215,11 +215,17 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
  .about-grid{grid-template-columns:.9fr 1.1fr;gap:44px}
  .mgrid{grid-template-columns:repeat(4,1fr);gap:20px}
  .pgrid{grid-template-columns:repeat(3,1fr)}
- .comm-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+ .comm-grid{grid-template-columns:1fr 1fr;gap:20px}
+ .comm-grid>:nth-child(3){grid-column:1/-1;max-width:340px;margin-inline:auto}
  .gal{grid-template-columns:repeat(4,1fr)}
  .visit-grid{grid-template-columns:1.1fr .9fr;gap:50px}
- .ogrid{grid-template-columns:repeat(3,1fr)}
+ .ogrid{grid-template-columns:1fr 1fr}
+ .ogrid>:nth-child(3){grid-column:1/-1;max-width:340px;margin-inline:auto}
  .sec{padding-top:88px;padding-bottom:88px}
+}
+@media (min-width:900px){
+ .comm-grid,.ogrid{grid-template-columns:repeat(3,1fr)}
+ .comm-grid>:nth-child(3),.ogrid>:nth-child(3){grid-column:auto;max-width:none;margin-inline:0}
 }
 
 /* collage layer */
