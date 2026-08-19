@@ -156,6 +156,8 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(58,44
 .gal-label .no{font-family:var(--hand);font-style:italic;font-size:1.05rem;color:var(--terra-d)}
 .gal-label em{font-style:normal;font-family:var(--body);font-size:.9rem;color:var(--faint);font-weight:400;letter-spacing:normal}
 .galgroup .gal{margin-top:18px}
+.gal-desc{max-width:54ch;color:var(--ink2);font-size:.95rem;line-height:1.4;margin-top:9px}
+.gal-desc .kr{display:block;font-size:.85rem;color:var(--faint);margin-top:4px}
 
 /* gallery — CSS grid (Safari-safe). 콜라주 기울임=셀에 rotate, 라운딩=img에(overflow:hidden 없이 회전 페인트버그 회피) */
 .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}
@@ -216,7 +218,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
  .comm-grid{grid-template-columns:repeat(3,1fr);gap:20px}
  .gal{grid-template-columns:repeat(4,1fr)}
  .visit-grid{grid-template-columns:1.1fr .9fr;gap:50px}
- .ogrid{grid-template-columns:1fr 1fr}
+ .ogrid{grid-template-columns:repeat(3,1fr)}
  .sec{padding-top:88px;padding-bottom:88px}
 }
 
@@ -311,7 +313,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
   <div class="comm-grid">
     <a class="ccard rv" href="#gal-interior">
       <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 9l1.3-4.1A1.5 1.5 0 0 1 5.9 3.9h12.2a1.5 1.5 0 0 1 1.4 1L20.8 9"/><path d="M4.2 9v10.2a.8.8 0 0 0 .8.8h14a.8.8 0 0 0 .8-.8V9"/><path d="M3.2 9h17.6"/><path d="M9.5 20.2V15h5v5.2"/></svg></div>
-      <h3>The Space</h3><p>Our little shop — counter, corners and quiet light.</p><p class="kr">매장 내부 · 카운터와 자리</p><span class="more">View photos ↓</span>
+      <h3>The Space</h3><p>Shop with quiet light and calm mood.</p><p class="kr">고즈넉한 불빛과 차분한 분위기의 내부 공간</p><span class="more">View photos ↓</span>
     </a>
     <a class="ccard rv" href="#gal-dessert">
       <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10.2h12l-1.2 9a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 10.2z"/><path d="M4.8 10.2h14.4"/><path d="M8.8 10.2c0-2 1.4-3.4 3.2-3.4s3.2 1.4 3.2 3.4"/><path d="M12 3.4v1.7"/></svg></div>
@@ -329,6 +331,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
   <img class="blob" loading="lazy" src="blob-blue.png" alt="" style="width:150px;top:5%;right:-22px">
   <div class="galgroup" id="gal-interior">
     <p class="gal-label rv"><span class="no">01</span> The Space <em>매장 내부</em></p>
+    <p class="gal-desc rv">Our little shop in Seongbuk — a quiet room for coffee, fresh bakes and a slow afternoon.<span class="kr">성북동의 작은 공간, 커피와 갓 구운 빵이 있는 자리예요.</span></p>
     <div class="gal">
       <a href="shop-1.jpg" target="_blank" rel="noopener"><img src="shop-1.jpg" width="640" height="960" alt="isle storefront" loading="lazy"></a>
       <a href="shop-2.jpg" target="_blank" rel="noopener"><img src="shop-2.jpg" width="667" height="1000" alt="isle counter" loading="lazy"></a>
@@ -343,6 +346,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
 
   <div class="galgroup" id="gal-dessert">
     <p class="gal-label rv"><span class="no">02</span> Desserts <em>디저트</em></p>
+    <p class="gal-desc rv">Seasonal cakes, cookies and petit gâteau, baked fresh and changing with the season.<span class="kr">계절에 따라 매일 굽는 케이크·쿠키·프티가토예요.</span></p>
     <div class="gal">
       <a href="sweet-1.jpg" target="_blank" rel="noopener"><img src="sweet-1.jpg" width="667" height="1000" alt="isle cupcakes" loading="lazy"></a>
       <a href="sweet-2.jpg" target="_blank" rel="noopener"><img src="sweet-2.jpg" width="720" height="959" alt="isle loaf cake" loading="lazy"></a>
@@ -357,6 +361,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
 
   <div class="galgroup" id="gal-market">
     <p class="gal-label rv"><span class="no">03</span> Markets &amp; Events <em>플리마켓 · 행사</em></p>
+    <p class="gal-desc rv">We're open to pop-ups and collaborations. For inquiries and proposals, please send us a DM.<span class="kr">팝업 및 행사 문의는 DM으로 주세요.</span></p>
     <div class="gal">
       <a href="mkt-1.jpg" target="_blank" rel="noopener"><img src="mkt-1.jpg" width="667" height="1000" alt="a maker at isle market" loading="lazy"></a>
       <a href="mkt-2.jpg" target="_blank" rel="noopener"><img src="mkt-2.jpg" width="667" height="1000" alt="fresh seasonal produce at the market" loading="lazy"></a>
@@ -402,6 +407,7 @@ footer .demo2{font-family:var(--hand);font-size:1.05rem;color:var(--terra-d);mar
     <div class="ogrid">
       <article class="ocard rv"><span class="lab">on naver</span><h3>Find us on Naver</h3><p>네이버 플레이스에서 위치·영업정보·리뷰를 확인하세요.</p><a class="go" href="https://naver.me/5du4asQC" target="_blank" rel="noopener">View on Naver →</a></article>
       <article class="ocard rv"><span class="lab">for events</span><h3>Catering &amp; Bulk</h3><p>모임·행사용 케이크와 디저트 박스는 DM으로 문의해 주세요.</p><a class="go" href="https://www.instagram.com/isle.bakery/" target="_blank" rel="noopener">DM on Instagram →</a></article>
+      <article class="ocard rv"><span class="lab">class</span><h3>Cafe Class</h3><p>대표님의 카페 컨설팅 클래스를 콜로소에서 만나요.</p><a class="go" href="https://coloso.co.kr/products/cafeconsultant-kimjihyeon" target="_blank" rel="noopener">Coloso Class →</a></article>
     </div>
   </div>
 </section>
